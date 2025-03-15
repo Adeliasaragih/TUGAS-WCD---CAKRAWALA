@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove First Occurrence of a String</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            margin: 50px;
+            font-size: 35px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Remove First Occurrence of a String</h2>
+    <input type="text" id="mainString" placeholder="Enter your sentence">
+    <input type="text" id="searchString" placeholder="Enter search string">
+    <button onclick="removeFirstOccurrence()">Remove</button>
+    <p id="result"></p>
+
+    <script>
+        function removeFirstOccurrence() {
+            let mainString = document.getElementById("mainString").value;
+            let searchString = document.getElementById("searchString").value;
+            let result = mainString.replace(searchString, "");
+            document.getElementById("result").innerText = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>
